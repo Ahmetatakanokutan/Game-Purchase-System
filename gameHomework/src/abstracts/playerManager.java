@@ -2,9 +2,13 @@ package abstracts;
 import interfaces.PlayerService;
 import entity.Player;
 
-public abstract class playerManager implements PlayerService{
+public class playerManager extends PlayerChecker implements PlayerService{
 
-	
+	if()
+	public void add(Player player) {
+		System.out.println(player.getName() + "added to system");
+		
+	}
 	public void delete(Player player) {
 		System.out.println(player.getName() + "deleted to system");
 	}

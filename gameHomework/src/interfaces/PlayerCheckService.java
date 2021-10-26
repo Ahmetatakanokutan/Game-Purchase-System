@@ -3,5 +3,6 @@ package interfaces;
 import entity.*;
 
 public interface PlayerCheckService {
-	public boolean CheckIfRealPerson(Player player);
+	public boolean CheckIfRealPerson(int id , String tcNo, String ad, String soyad, String dogumYili);
+
 }
