@@ -6,7 +6,7 @@ public class MessageLogger implements Logger {
 
 	@Override
 	public void log(Player player) {
-		System.out.println(player.getName() + "logged via message");
+		System.out.println(player.getName() + " logged via message");
 		
 	}
 

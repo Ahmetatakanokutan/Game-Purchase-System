@@ -1,21 +1,23 @@
 package abstracts;
 
+import playerList.PlayerList;
 import entity.Player;
 import interfaces.PlayerCheckService;
 
 public class PlayerChecker implements PlayerCheckService {
 
-	Player player;
-	public PlayerChecker(Player player) {
-		super();
-		this.player = player;
-	}
-	public boolean CheckIfRealPerson(int id , String tcNo, String ad, String soyad, String dogumYili) {
-		if (id == player.getId() && tcNo == player.getNationalityId() && ad == player.getName() && soyad == player.getSurName()
-				&& dogumYili == player.getBirthDay())
+	
+	int sayac = 0;
+	
+	public boolean CheckIfRealPerson(Player player) {
+		String id2 = Integer.toString(player.getId());
+		for(String i:PlayerList.id ) {
+		if (id2 == PlayerList.id[sayac] && player.getNationalityId() == PlayerList.nationalityId[sayac] && player.getName() == PlayerList.names[sayac] && player.getSurName() == PlayerList.surNames[sayac]
+				&& player.getBirthDay() == PlayerList.dateOfBirth[sayac])
 			return true;
+		sayac++;
+		}
 		
-		else
 			return false;
 	}
 

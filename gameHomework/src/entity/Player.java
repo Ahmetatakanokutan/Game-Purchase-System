@@ -16,12 +16,7 @@ public class Player  {
 		this.nationalityId = nationalityId;
 		this.birthDay = birthDay;
 		}
-		else {
-			System.out.println("bu bilgilerde gecerli bir kisi bulunmamaktadir");
-		return;
-		}
 		
-	}
 
 	public int getId() {
 		return id;

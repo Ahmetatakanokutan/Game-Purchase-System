@@ -7,13 +7,13 @@ public class GameSeller extends OfferManager implements BaseSeller{
 
 	@Override
 	public void buy(Player player , Logger logger) {
-		System.out.println(player.getName() +"isimli kisi oyun satin aldi");
-		
+		System.out.println(player.getName() +" purchase a game");
+		logger.log(player);
 	}
 
 	public void refund(Player player , Logger logger) {
-		System.out.println(player.getName() + "isimli kisi satin aldigi oyunu geri iade etti");
-		
+		System.out.println(player.getName() + " refund a game");
+		logger.log(player);
 	}
 
 }
